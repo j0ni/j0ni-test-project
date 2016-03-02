@@ -7,6 +7,11 @@ machine:
 test:
   pre:
     - "echo ${cyvar3}"
+    - "sleep 100"
+    - "echo need to sleep again for a while"
+    - "sleep 100"
+    - "echo this is all about having longer builds"
+
 notify:
   webhooks:
     - url: http://mal.lollyshouse.net:7777/
