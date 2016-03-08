@@ -4,13 +4,19 @@ machine:
     cyvar2: 123
     cyvar3: "hello\nworld\nand\nblob"
 
+dependencies:
+  post:
+    - "sudo apt-get install chicken-bin libchicken-dev"
+
 test:
   pre:
     - "echo ${cyvar3}"
-    - "sleep 100"
+    - "csi scm/stuff.scm zootlewurdle"
     - "echo need to sleep again for a while"
-    - "sleep 100"
+    - "sleep 10"
+    - "csi scm/stuff.scm nomblewotsit"
     - "echo this is all about having longer builds"
+    - "csi scm/stuff.scm gohomeracoonsyouredrunk"
 
 notify:
   webhooks:
