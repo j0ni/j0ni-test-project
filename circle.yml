@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   post:
-    - "apt-get install chicken-bin libchicken-dev"
+    - "sudo apt-get install chicken-bin libchicken-dev"
 
 test:
   pre:
